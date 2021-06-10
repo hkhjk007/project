@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+
+
+
+
+/* -------------------------TYPOGRAPHY-------------------- */
+body{
+    font-family: 'Coda', cursive;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 26px;
+}
+
+h2{
+    font-size: 15px;
+}
+
+h3{
+    font-size: 13px;
+}
+a, h4{
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+/* -------------------------layout-------------------- */
+.hidden{
+    display: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mb-27{
+    margin-bottom: 27px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+/* -------------------------header-------------------- */
+
+.header-flex{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-flex .logo{
+    flex: 7;
+    justify-content: flex-end;
+    order: 1;
+    background: url(../images/logo.png) no-repeat right;
+    width: 69px;
+    height: 67px;
+    text-indent: -9999em;
+}
+.header-flex .bar{
+    font-size: 18px;
+    margin-left: 10px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.bar.move{
+    left: 230px;
+    
+}
+.header-flex .header-form{
+    flex: 4;
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.header-flex .bag{
+    flex: 1;
+    order: 3;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+/* -------------------------aside-------------------- */
+aside {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+    background-color: white;
+    height: 100vh;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+aside.move{
+    left: 0%;
+}
+aside span{
+    background-color: #979797;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+aside span i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+aside form input{
+    width: 130px;
+    border-radius: 10px;
+}
+.join{
+    margin-bottom: 27px;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.join li{
+    margin-right: 10px;
+}
+
+/* -------------------------blur 효과-------------------- */
+.header-flex .logo.blur,
+.header-form.blur,
+.header-flex .bag.blur,
+.main_slide_wrap.blur,
+footer.blur,
+.products.blur,
+.more.blur{
+    filter: blur(3px);
+}
